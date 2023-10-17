@@ -14,7 +14,7 @@
 
 
 
-<title>Plot 3d elevation by GMT | Yanlan</title>
+<title>My biography | Yanlan</title>
 
 
 
@@ -130,90 +130,17 @@
 </script>
             <div class="main">
                 <div class="container">
-    
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">Plot 3d elevation by GMT</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Yanlan Hu</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">September 24, 2023&nbsp;&nbsp;15:39:42</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/GMT/">GMT</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
-
-        <div class="post-content">
-            <blockquote>
-<p>Reference: <a target="_blank" rel="noopener" href="https://docs.gmt-china.org/latest/examples/ex029/#gmtplot-116c7b68ca8c491adade37c19a9a9b62">GMT Chinese community</a></p>
-</blockquote>
-<p>Here I plot the topography and add the locations of the seismometers on it.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">R=76.1167/76.6667/-69.6167/-69.35/-100/1000</span><br><span class="line"></span><br><span class="line">gmt begin elevation_3d pdf</span><br><span class="line">gmt grdtrack -R76.1167/76.6667/-69.6167/-69.35 -GREMA.nc staloc.txt &gt; staloc.xyz # generate the corresponding elevations of the stations by track locations on topography file REMA.nc</span><br><span class="line">gmt makecpt -Cgray -T0/900</span><br><span class="line">gmt grdview REMA.nc -R$R -JM10c -JZ3c -N-100+ggray -C -Qi300 -I -Ba -BwsENZ -p30/25</span><br><span class="line">cat staloc.xyz | awk &#x27;&#123;print $1,$2,$5&#125;&#x27; | gmt plot3d -R$R -JM10c -JZ3c -St0.05c -W1p,white -Gwhite -p</span><br><span class="line">gmt colorbar -C -Ba -DJTC+o0/1c -p</span><br><span class="line">gmt basemap -TdjRB+w3c+l+o0.5c/0.5c -p30/25/700 # plot the North arrow</span><br><span class="line">gmt end show</span><br><span class="line"></span><br><span class="line">rm staloc.xyz</span><br></pre></td></tr></table></figure>
-
-        </div>
-
+    <article class="post-wrap page">
         
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Yanlan Hu</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="http://example.com/2023/09/24/2023-9-24-Plot-3d-elevation-GMT/">http://example.com/2023/09/24/2023-9-24-Plot-3d-elevation-GMT/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-
-            </section>
+        <h2 class="post-title">My biography</h2>
         
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-            
-            <a class="next" rel="next" href="/2023/09/24/2023-9-24-Self-attention-position-embedding/">Position embedding in self-attention</a>
-            
-        </section>
+        <section class="post-content">
+            <p>Hi! I’m Yanlan Hu, in my final year as a graduate student in University of Science and Technology of China (USTC).</p>
+<h2 id="Research-interest"><a href="#Research-interest" class="headerlink" title="Research interest"></a>Research interest</h2><p>My research interests focus on earthquake triggering, the evolution of foreshocks, mainshocks and aftershocks. I am interested in fine-scale earthquake sequence analysis based on fault geometry. I also do research in machine learning in seismic monitoring, clustering and data mining.</p>
+<p>Besides, I am also interested in earthquake physics and hazard early warning.</p>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><p>I love photographing and various sports. I love trying new things.<br>And I love being cool.</p>
 
-
+        </section>
     </article>
 </div>
 
